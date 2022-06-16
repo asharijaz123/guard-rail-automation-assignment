@@ -1,6 +1,6 @@
 # Guard Rails Assignment Suite
 
-Guard Rails Assignemnt SUite is a set of guidelines or rules used for creating and designing test cases for Juice Shop application. The framework is comprised of a combination of industry practices and modern tools that are designed to help add tests more efficiently.
+Guard Rails Assignemnt Suite is a set of guidelines or rules used for creating and designing test cases for Juice Shop application. The framework is comprised of a combination of industry practices and modern tools that are designed to help add tests more efficiently.
 
 The framework includes guidelines to coding standards, BDD approach that drive the entire framework, design patterns, test-data handling methods, page object classes, processes for storing test results, and custom utility functions on how to access external resources.
 
@@ -28,7 +28,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 On your local machine, you can run your tests using the Visual Studio Code
 For building the project follow the step written below : 
-Clone the project from the repository
+Clone the project from the repository 
+git clone https://github.com/asharijaz123/guard-rail-automation-assignment.git
 npm install
 For executing backend  tests: npm run tagTest -- --env fileConfig="juice-shop",TAGS=" @back-end-test "
 For executing the front end tests : npm run tagTest -- --env fileConfig="juice-shop",TAGS=" @front-end-test"

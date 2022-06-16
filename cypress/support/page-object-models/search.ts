@@ -15,7 +15,11 @@ const btnCookieMessage = 'a[aria-label="dismiss cookie message"]'
 const btnBackToHomePage = 'button[aria-label="Back to homepage"]'
 const searchIcon = '//mat-icon[text()=" search "]'
 
-
+/**
+      * addItemToCart add items to the cart based on itemName and totalItems    
+      * @param itemName     
+      * @param totalItems   
+   */
 Cypress.Commands.add("addItemToCart", (itemName, totalItems) => {
   const btnAddBasket =`//div[text()=" ${itemName} "]/parent::div/parent::div/following-sibling::div /button`
   const txtVerifyItem =`//mat-cell[text()=" ${itemName} "]`
@@ -35,26 +39,33 @@ Cypress.Commands.add("addItemToCart", (itemName, totalItems) => {
 
 });
 
+
+// clickCheckout clicks on the checkout button    
 Cypress.Commands.add("clickCheckout", () => {
   cy.get(btnCheckout).should('be.visible')
     .click()
 
 });
+
+// deleteExistingItem function delete all the items from the cart  
 Cypress.Commands.add("deleteExistingItem", () => {
   cy.xpath(btnShoppingCart).click()
   cy.wait(3000)
   cy.get("body").then($body => {
     if ($body.find('svg[data-icon="trash-alt"]').length > 0) {  
-      cy.log('Going inside the loop')
       cy.get('svg[data-icon="trash-alt"]').click();
     }
   cy.get(btnBackToHomePage).click()
-  cy.log('I am outside the loop')
-
 });
 });
 
-
+/**
+      * addNewAddress adds a new address with respective parameter  
+      * @param country     
+      * @param name
+      * @param mNuber
+      * @param zipCode     
+   */
 Cypress.Commands.add("addNewAddress", (country, name, mNuber, zipCode
   , address, city, state) => {
     cy.get(btnCookieMessage).click()
@@ -78,6 +89,11 @@ Cypress.Commands.add("addNewAddress", (country, name, mNuber, zipCode
     .click()
 });
 
+/**
+      * searchAndVerifyProduct searches for a product from searchbar and verfies that
+      * banana does not exist
+      * @param productName         
+   */
 Cypress.Commands.add("searchAndVerifyProduct", (productName) => {
   cy.xpath(searchIcon).should('be.visible').click()
     cy.get(searchBar).should('be.visible')

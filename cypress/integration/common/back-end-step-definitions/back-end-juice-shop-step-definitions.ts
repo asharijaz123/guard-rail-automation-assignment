@@ -1,6 +1,6 @@
 /**
  * @author ASHAR IJAZ <ashar.ijaz@arbisoft.com>
- * @dated  20/04/22 
+ * @dated  15/06/22 
  *
 /* eslint-disable no-undef */
 /* eslint-disable import/no-extraneous-dependencies */
@@ -55,7 +55,7 @@ Then("The api should return response code of 200 and valid reponse data for sign
     });
 });
 
-
+// addItemIntoCart adds the items in the cart by calling the apis.
 function addItemIntoCart(datatable) {
   datatable.hashes()
     .forEach((element) => {
@@ -90,6 +90,7 @@ function addItemIntoCart(datatable) {
     })
 }
 
+// getTotalItemsInCart function returns the total number of item added in the cart
 function getTotalItemsInCart(datatable) {
   datatable.hashes()
   .forEach((element) => {
@@ -128,7 +129,7 @@ function getTotalItemsInCart(datatable) {
       })
 }
 
-
+// deleteBasketItem function deleted the items in the cart by calling pom methods 
 function deleteBasketItem() {
       cy.readFile("cypress/fixtures/responses/get-total-items-in-cart.json")
        .then((responseBasket) => {
@@ -153,11 +154,8 @@ function deleteBasketItem() {
           expect(response.status).to.eq(200)
 
         });
-
-      });
-    
+      });    
 }
-
 
 When("I Add Item into the cart from Api", addItemIntoCart);
 Then("I Verify the Total Items in Cart", getTotalItemsInCart);

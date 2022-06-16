@@ -26,7 +26,7 @@ Feature: ADDING ITEMS TO THE CART
        |Pakistan| Ashar  | 0321881232 | 54000      | abc street | Lahore | Punjab |
 
 
- @front-end-test1
+ @front-end-test
     Scenario: Search Apple and Verify that Banana does not exists
     When I Search and Verify that Banana does not exist in the Search
         |productName            |

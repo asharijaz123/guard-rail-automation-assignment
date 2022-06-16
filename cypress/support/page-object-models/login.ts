@@ -6,6 +6,11 @@ const txtPassword = 'input#password'
 const btnLoginMain = 'button#loginButton'
 const btnCloseBanner ='button[aria-label="Close Welcome Banner"]'
 
+/**
+      * loginIntoApplication function logs into the application with email and password  
+      * @param email     
+      * @param password   
+   */
 Cypress.Commands.add("loginIntoApplication", (email, password) => {
   cy.visit(Cypress.env('url'))  
   cy.get(btnCloseBanner).should('be.visible')
@@ -22,13 +27,3 @@ Cypress.Commands.add("loginIntoApplication", (email, password) => {
     .click()
 });
 
-// eslint-disable-next-line no-undef
-Cypress.Commands.add("writeDataInFile", (path, nameof, value) => {
-  cy.readFile(path)
-    .then((obj) => {
-      const myName = nameof;
-      const actualObj = obj;
-      actualObj[myName] = value;
-      cy.writeFile(path, actualObj);
-    });
-});

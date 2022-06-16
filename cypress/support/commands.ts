@@ -31,7 +31,12 @@ Cypress.Commands.add("getLengthofSearch", (apiResponse) => {
 
 });
 
-
+/**
+      * writeDataInFile write data in a file based on a key  
+      * @param path     
+      * @param nameof
+      * @param value   
+   */
 // eslint-disable-next-line no-undef
 Cypress.Commands.add("writeDataInFile", (path, nameof, value) => {
   cy.readFile(path)

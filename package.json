@@ -7,8 +7,6 @@
     "test": "cypress run --headed",
     "headTest": "node_modules\\.bin\\cypress run",
     "tagTest": "cypress-tags run --headed",
-    "headlessTest": "node_modules\\.bin\\cypress-tags run --headless",
-    "backendTest": "node_modules\\.bin\\cypress-tags run --headless",
     "open": "cypress open",
     "lint": "eslint  \"cypress/**/*.ts\"",
     "format": "prettier --write \"./**/*.{ts,json}\"",
