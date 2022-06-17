@@ -1,5 +1,5 @@
 /**
- * @author ASHAR IJAZ <ashar.ijaz@arbisoft.com>
+ * @author ASHAR IJAZ <asharijaz23@gmail.com>
  * @dated  15/06/22 
  *
 /* eslint-disable no-undef */

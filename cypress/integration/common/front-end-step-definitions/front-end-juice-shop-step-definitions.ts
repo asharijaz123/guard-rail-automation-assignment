@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 /**
- * @author ASHAR IJAZ <ashar.ijaz@arbisoft.com>
+ * @author ASHAR IJAZ <asharijaz23@gmail.com>
  * @dated  14/06/22 
  *
 /* eslint-disable prefer-template */
