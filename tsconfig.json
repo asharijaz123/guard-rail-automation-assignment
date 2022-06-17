@@ -5,6 +5,6 @@
       "types": ["cypress","cypress-xpath"],
       "allowJs": true
     },
-    "include": ["**/*.ts", "cypress/integration/common/back-end-step-definitions/pra-search-step-definition.js"],
+    "include": ["**/*.ts"],
     "exclude": []
   }
