@@ -49,8 +49,13 @@ import {
       })
   }
 
+  function deleteItems() {
+    cy.deleteExistingItem()
+  }
+
   Given("I login into the OWASP Juice Shop Application", loginIntoApplication);
   When("I add Items to the Carts", addNewItemsToCart);
+  Then("I Delete the Items from the Cart", deleteItems);
   Then("I add New Address and Verify", addNewAddress);
   Then("I Search and Verify that Banana does not exist in the Search", searchAndVerifyProduct);
 

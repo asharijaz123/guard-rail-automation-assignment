@@ -20,7 +20,10 @@ declare namespace Cypress {
       writeDataInFile(path, nameof, value): Cypress.Chainable < void > ;
       deleteExistingItem():Cypress.Chainable<void>;
       getLengthofSearch(response):Cypress.Chainable<void>;
+      deleteItems():Cypress.Chainable<void>
   
     } 
   
   }
+
+  

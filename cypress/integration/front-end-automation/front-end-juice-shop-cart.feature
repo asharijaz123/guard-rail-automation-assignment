@@ -15,6 +15,9 @@ Feature: ADDING ITEMS TO THE CART
        |country | name   | mNuber     | zipCode    | address    | city   | state  |
        |Pakistan| Ashar  | 0321881232 | 54000      | abc street | Lahore | Punjab |
 
+    Then I Delete the Items from the Cart
+   
+   
     @front-end-test
     Scenario: Add Two Items to the Card
     When I add Items to the Carts
@@ -24,6 +27,8 @@ Feature: ADDING ITEMS TO THE CART
     Then I add New Address and Verify
        |country | name   | mNuber     | zipCode    | address    | city   | state  |
        |Pakistan| Ashar  | 0321881232 | 54000      | abc street | Lahore | Punjab |
+    
+    Then I Delete the Items from the Cart
 
 
  @front-end-test
